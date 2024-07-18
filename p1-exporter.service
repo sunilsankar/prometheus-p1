@@ -1,0 +1,11 @@
+[Unit]
+Description=Prometheus P1 Exporter
+
+[Service]
+User=root
+Group=root
+Environment="SERIAL_DEVICE=/dev/ttyUSB0"
+ExecStart=/usr/bin/prometheus-p1-exporter
+
+[Install]
+WantedBy=multi-user.target
